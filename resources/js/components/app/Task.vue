@@ -1,5 +1,5 @@
 <template>
-	<div class="p-2" :class="{ 'bg-yellow-100 text-gray-900': task.important }">
+	<div class="p-2 rounded-md" :class="{ 'bg-yellow-100 text-gray-900': task.important }">
 		<div class="flex items-baseline justify-between">
 			<input type="checkbox" class="w-4 h-4" v-model="task.done" />
 			<h3

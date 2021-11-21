@@ -20,13 +20,9 @@ export default {
 
 	data() {
 		return {
-			tasks: [],
+			tasks: this.$attrs.tasks,
 		}
 	},
-
-	mounted() {
-		this.tasks = this.$attrs.tasks;
-	}
 }
 </script>
 
