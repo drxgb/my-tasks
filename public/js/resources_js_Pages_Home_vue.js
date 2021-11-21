@@ -206,7 +206,7 @@ var _hoisted_1 = {
   "class": "h-screen flex flex-col"
 };
 var _hoisted_2 = {
-  "class": "flex-grow container mx-auto my-8 space-y-4"
+  "class": "flex-grow container mx-auto my-8 space-y-4 relative"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Header = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Header");
@@ -230,10 +230,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "btn btn-add absolute right-0 bottom-0"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Search = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Search");
 
   var _component_TaskList = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TaskList");
+
+  var _component_font_awesome_icon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("font-awesome-icon");
 
   var _component_Layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Layout");
 
@@ -247,7 +252,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         tasks: $data.tasks
       }, null, 8
       /* PROPS */
-      , ["tasks"])];
+      , ["tasks"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_font_awesome_icon, {
+        icon: ['fas', 'plus']
+      })])];
     }),
     _: 1
     /* STABLE */

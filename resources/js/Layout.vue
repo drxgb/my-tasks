@@ -2,7 +2,7 @@
 	<main class="h-screen flex flex-col">
 		<Header />
 
-		<section class="flex-grow container mx-auto my-8 space-y-4">
+		<section class="flex-grow container mx-auto my-8 space-y-4 relative">
 			<slot />
 		</section>
 

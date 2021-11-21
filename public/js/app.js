@@ -30167,7 +30167,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_2__.library.add([_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faUserSecret, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faHeart, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faEdit, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faTrash, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faExclamationCircle]); // ================================================================
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_2__.library.add([_fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faUserSecret, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faHeart, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faEdit, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faTrash, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faExclamationCircle, _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__.faPlus]); // ================================================================
 
 (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.createInertiaApp)({
   resolve: function resolve(name) {

@@ -5,24 +5,31 @@
 @layer components {
 	.card {
 		@apply bg-gray-200 dark:bg-gray-800
-			border-gray-900 dark:border-gray-200
+			border-2 border-gray-900 dark:border-gray-400
 			rounded-xl shadow-md
 			px-8 py-4;
 	}
 
 	.btn {
-		@apply border-2 border-green-500 text-green-500
+		@apply border-2
 			hover:bg-opacity-0 bg-opacity-100
 			rounded-md px-2 py-1
 			duration-300 ease-in-out;
 	}
 
+	.btn-add {
+		@apply bg-blue-500 text-blue-100 border-blue-600
+			w-16 h-16 text-2xl
+			font-extrabold rounded-full
+			hover:border-blue-500 hover:bg-opacity-0 hover:text-blue-500;
+	}
+
 	.btn-edit {
-		@apply bg-green-400 text-green-100 rounded-xl active:bg-green-700 hover:text-green-400;
+		@apply bg-green-400 border-green-500 text-green-100 rounded-xl active:bg-green-600 hover:text-green-400;
 	}
 
 	.btn-delete {
-		@apply bg-red-400 border-red-500 text-red-100 rounded-xl active:bg-red-700 hover:text-red-400;
+		@apply bg-red-400 border-red-500 text-red-100 rounded-xl active:bg-red-600 hover:text-red-400;
 	}
 
 	h1 {

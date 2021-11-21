@@ -2,6 +2,9 @@
 	<Layout>
 		<Search :tasks="$props.tasks" />
 		<TaskList :tasks="tasks" />
+		<button class="btn btn-add absolute right-0 bottom-0">
+			<font-awesome-icon :icon="['fas', 'plus']" />
+		</button>
 	</Layout>
 </template>
 

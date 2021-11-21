@@ -14,9 +14,17 @@ import {
 	faEdit,
 	faTrash,
 	faExclamationCircle,
+	faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add([faUserSecret, faHeart, faEdit, faTrash, faExclamationCircle]);
+library.add([
+	faUserSecret,
+	faHeart,
+	faEdit,
+	faTrash,
+	faExclamationCircle,
+	faPlus,
+]);
 
 // ================================================================
 
