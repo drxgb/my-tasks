@@ -1,11 +1,11 @@
 <template>
-	<div class="card max-w-3xl mx-auto">
+	<div class="card max-w-3xl mx-auto overflow-y-scroll">
 		<ul v-if="tasks.length > 0">
-			<li v-for="task in tasks" :key="task.id">
+			<li v-for="task in tasks" :key="task.id" class="mb-2">
 				<Task :task="task" />
 			</li>
 		</ul>
-		<h1 v-else class="text-xl font-semibold">Não há tarefas neste momento...</h1>
+		<h1 v-else>Não há tarefas neste momento...</h1>
 	</div>
 </template>
 

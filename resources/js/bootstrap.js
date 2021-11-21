@@ -8,10 +8,15 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
  * FontAwesome
  * ================================================================
  */
-import { faUserSecret, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+	faUserSecret,
+	faHeart,
+	faEdit,
+	faTrash,
+	faExclamationCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faUserSecret);
-library.add(faHeart);
+library.add([faUserSecret, faHeart, faEdit, faTrash, faExclamationCircle]);
 
 // ================================================================
 

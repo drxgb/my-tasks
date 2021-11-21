@@ -32,7 +32,7 @@ class TaskSeeder extends Seeder
 			'title' => 'Estudar Inertia',
 			'description' => 'Desbravar as aventuras do desenvolvimento utilizando Intertia.',
 			'date' => Date::create(2021, 11, 30, 9),
-			'important' => false,
+			'important' => true,
 		]);
     }
 }

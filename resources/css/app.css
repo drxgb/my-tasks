@@ -9,4 +9,31 @@
 			rounded-xl shadow-md
 			px-8 py-4;
 	}
+
+	.btn {
+		@apply border-2 border-green-500 text-green-500
+			hover:bg-opacity-0 bg-opacity-100
+			rounded-md px-2 py-1
+			duration-300 ease-in-out;
+	}
+
+	.btn-edit {
+		@apply bg-green-400 text-green-100 rounded-xl active:bg-green-700 hover:text-green-400;
+	}
+
+	.btn-delete {
+		@apply bg-red-400 border-red-500 text-red-100 rounded-xl active:bg-red-700 hover:text-red-400;
+	}
+
+	h1 {
+		@apply text-3xl font-bold;
+	}
+
+	h2 {
+		@apply text-2xl font-semibold;
+	}
+
+	h3 {
+		@apply text-xl;
+	}
 }

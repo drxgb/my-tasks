@@ -101,9 +101,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Task',
+  methods: {
+    writeDate: function writeDate(date) {
+      var d = new Date(date);
+      var now = new Date();
+      var diff = Math.round((d.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      var day = '';
+      if (d.getDay() == now.getDay()) day = 'Hoje às';else if (diff == 1) day = 'Amanhã às';else if (diff == -1) day = 'Ontem às';else day = d.toLocaleDateString();
+      return "".concat(day, " ").concat(d.toLocaleTimeString().substring(0, 5));
+    }
+  },
   data: function data() {
     return {
-      task: {}
+      task: {
+        id: Number,
+        title: String,
+        description: String,
+        date: String,
+        important: Boolean,
+        done: Boolean
+      }
     };
   },
   mounted: function mounted() {
@@ -286,9 +303,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "flex items-baseline justify-between"
+};
+var _hoisted_2 = ["title"];
+var _hoisted_3 = {
+  "class": "btn btn-edit mr-2"
+};
+var _hoisted_4 = {
+  "class": "btn btn-delete"
+};
+var _hoisted_5 = {
+  "class": "flex items-middle"
+};
+var _hoisted_6 = {
+  "class": "w-4 mr-4"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.task.title), 1
-  /* TEXT */
+  var _component_font_awesome_icon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("font-awesome-icon");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["p-2", {
+      'bg-yellow-100 text-gray-900': $data.task.important
+    }])
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "checkbox",
+    "class": "w-4 h-4",
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $data.task.done = $event;
+    })
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $data.task.done]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["flex-grow mx-2 cursor-pointer select-none", {
+      'line-through': $data.task.done
+    }]),
+    onClick: _cache[1] || (_cache[1] = function ($event) {
+      return $data.task.done = !$data.task.done;
+    }),
+    title: $data.task.description
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.task.title), 11
+  /* TEXT, CLASS, PROPS */
+  , _hoisted_2), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_font_awesome_icon, {
+    icon: ['fas', 'edit']
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_font_awesome_icon, {
+    icon: ['fas', 'trash']
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_font_awesome_icon, {
+    "class": "text-red-500 text-xl",
+    icon: ['fas', 'exclamation-circle']
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, $data.task.important]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["text-xs", {
+      'line-through': $data.task.done
+    }])
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.writeDate($data.task.date)), 3
+  /* TEXT, CLASS */
+  )])], 2
+  /* CLASS */
   );
 }
 
@@ -307,21 +379,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "card max-w-3xl mx-auto"
+  "class": "card max-w-3xl mx-auto overflow-y-scroll"
 };
 var _hoisted_2 = {
   key: 0
 };
 var _hoisted_3 = {
-  key: 1,
-  "class": "text-xl font-semibold"
+  key: 1
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Task = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Task");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [$data.tasks.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("ul", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.tasks, function (task) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
-      key: task.id
+      key: task.id,
+      "class": "mb-2"
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Task, {
       task: task
     }, null, 8
