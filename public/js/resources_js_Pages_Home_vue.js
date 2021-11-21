@@ -47,6 +47,11 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     tasks: Array
+  },
+  data: function data() {
+    return {
+      tasks: this.$props.tasks
+    };
   }
 });
 
@@ -204,7 +209,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Layout, null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TaskList, {
-        tasks: _ctx.$props.tasks
+        tasks: $data.tasks
       }, null, 8
       /* PROPS */
       , ["tasks"])];

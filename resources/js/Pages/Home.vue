@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<TaskList :tasks="$props.tasks" />
+		<TaskList :tasks="tasks" />
 	</Layout>
 </template>
 
@@ -17,6 +17,12 @@ export default {
 
 	props: {
 		tasks: Array
+	},
+
+	data() {
+		return {
+			tasks: this.$props.tasks,
+		}
 	}
 };
 </script>
