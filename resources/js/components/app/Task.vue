@@ -45,7 +45,7 @@ export default {
 			if (d.getDay() == now.getDay()) day = 'Hoje às';
 			else if (diff == 1) day = 'Amanhã às';
 			else if (diff == -1) day = 'Ontem às';
-			else day = d.toLocaleDateString();
+			else day = `${d.toLocaleDateString()} - `;
 
 			return `${day} ${d.toLocaleTimeString().substring(0, 5)}`;
 		},

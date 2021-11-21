@@ -141,7 +141,7 @@ __webpack_require__.r(__webpack_exports__);
       var now = new Date();
       var diff = Math.round((d.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
       var day = '';
-      if (d.getDay() == now.getDay()) day = 'Hoje às';else if (diff == 1) day = 'Amanhã às';else if (diff == -1) day = 'Ontem às';else day = d.toLocaleDateString();
+      if (d.getDay() == now.getDay()) day = 'Hoje às';else if (diff == 1) day = 'Amanhã às';else if (diff == -1) day = 'Ontem às';else day = "".concat(d.toLocaleDateString(), " - ");
       return "".concat(day, " ").concat(d.toLocaleTimeString().substring(0, 5));
     }
   },
