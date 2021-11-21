@@ -1,11 +1,16 @@
 <template>
-	<section>
+	<Layout>
 		<h1>Fala, fiote! Blz?</h1>
-	</section>
+	</Layout>
 </template>
 
 <script>
-export default {};
-</script>
+import Layout from '../Layout';
 
-<style></style>
+export default {
+	name: 'Home',
+	components: {
+		Layout,
+	}
+};
+</script>
