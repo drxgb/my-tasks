@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<h1 class="text-3xl">Fala, fiote! Blz?</h1>
+		<h1 class="text-3xl">Home</h1>
 	</Layout>
 </template>
 
