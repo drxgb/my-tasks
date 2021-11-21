@@ -1,11 +1,13 @@
 <template>
 	<Layout>
+		<Search :tasks="$props.tasks" />
 		<TaskList :tasks="tasks" />
 	</Layout>
 </template>
 
 <script>
-import Layout from '../Layout';
+import Layout from '../Layout.vue';
+import Search from '../components/app/Search.vue';
 import TaskList from '../components/app/TaskList.vue';
 
 export default {
@@ -13,6 +15,7 @@ export default {
 	components: {
 		Layout,
 		TaskList,
+		Search,
 	},
 
 	props: {

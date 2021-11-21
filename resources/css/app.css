@@ -36,4 +36,9 @@
 	h3 {
 		@apply text-xl;
 	}
+
+	input[type="text"],
+	input[type="date"] {
+		@apply dark:bg-gray-600 px-2 outline-none;
+	}
 }

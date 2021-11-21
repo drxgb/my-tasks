@@ -1,7 +1,7 @@
 <template>
 	<div class="card max-w-3xl mx-auto overflow-y-scroll">
-		<ul v-if="tasks.length > 0">
-			<li v-for="task in tasks" :key="task.id" class="mb-2">
+		<ul v-if="tasks.length > 0" class="spacing-y-2">
+			<li v-for="task in tasks" :key="task.id">
 				<Task :task="task" />
 			</li>
 		</ul>
