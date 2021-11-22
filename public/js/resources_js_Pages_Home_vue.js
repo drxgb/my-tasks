@@ -142,12 +142,6 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Modal: _Modal_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  methods: {
-    closeForm: function closeForm() {
-      this.task = {};
-      this.$emit('close');
-    }
-  },
   data: function data() {
     return {
       task: this.$attrs.task | {},
@@ -577,7 +571,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       }), _hoisted_7]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
         "class": "btn btn-delete",
         onClick: _cache[3] || (_cache[3] = function ($event) {
-          return $options.closeForm();
+          return _ctx.$emit('close');
         })
       }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_font_awesome_icon, {
         icon: ['fas', 'times']

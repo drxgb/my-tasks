@@ -31,7 +31,7 @@
 				<font-awesome-icon :icon="['fas', 'save']" />
 				Salvar
 			</button>
-			<button class="btn btn-delete" @click="closeForm()">
+			<button class="btn btn-delete" @click="$emit('close')">
 				<font-awesome-icon :icon="['fas', 'times']" />
 				Cancelar
 			</button>
@@ -46,14 +46,6 @@ export default {
 	name: 'Form',
 	components: {
 		Modal
-	},
-
-	methods: {
-		closeForm()
-		{
-			this.task = {};
-			this.$emit('close');
-		}
 	},
 
 	data() {
